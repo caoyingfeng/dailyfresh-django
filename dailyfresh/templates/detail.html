@@ -111,7 +111,7 @@
         }
 
         //增加商品的数量
-        $.('.add').click(function () {
+        $('.add').click(function () {
             //获取商品原始数量
             count = $('.num_show').val()
             //加1
@@ -162,9 +162,10 @@
 		    // 获取商品id和商品数量
             sku_id = $(this).attr('sku_id')
             count = $('.num_show').val()
-
+            // 验证csrf
+            csrf = $('input[name="csrfmiddlewaretoken"]').val()
             // 组织参数
-            params = {'sku_id':sku_id, 'count':count}
+            params = {'sku_id':sku_id, 'count':count, 'csrfmiddlewaretoken': csrf}
             // 发起ajax post请求 访问/cart/add，传递参数sku_id,count
             $.post('/cart/add', params, function (data) {
                 if(data.res==5)

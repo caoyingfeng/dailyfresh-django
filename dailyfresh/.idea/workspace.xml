@@ -4,10 +4,8 @@
     <list default="true" id="8e15107d-f62d-482e-aa0b-8788875ac931" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_tmp___" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cart/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dailyfresh/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dailyfresh/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,35 +93,35 @@
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.38" value="1" />
-          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.49" value="2" />
           <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2497" />
-          <entry key="py" value="2738" />
+          <entry key="html" value="3987" />
+          <entry key="py" value="2846" />
           <entry key="txt" value="143" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2497" />
+          <entry key="HTML" value="3987" />
           <entry key="PLAIN_TEXT" value="143" />
-          <entry key="Python" value="2738" />
+          <entry key="Python" value="2846" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="6" />
+          <entry key="html" value="7" />
           <entry key="py" value="10" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="6" />
+          <entry key="HTML" value="7" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="10" />
         </counts>
@@ -135,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3916">
-              <caret line="178" column="70" selection-start-line="178" selection-start-column="70" selection-end-line="178" selection-end-column="70" />
+            <state relative-caret-position="217">
+              <caret line="165" column="63" lean-forward="true" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -153,17 +151,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dailyfresh/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="3256">
               <caret line="149" column="12" selection-start-line="149" selection-start-column="12" selection-end-line="149" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/cart/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#1#42#0" expanded="true" />
               </folding>
@@ -171,11 +169,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-83">
-              <caret line="54" column="67" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
+            <state relative-caret-position="445">
+              <caret line="245" column="22" selection-start-line="245" selection-start-column="22" selection-end-line="245" selection-end-column="22" />
+              <folding>
+                <element signature="n#ul#0;n#!!top" />
+                <element signature="n#ul#2;n#!!top" />
+                <element signature="n#ul#3;n#!!top" />
+                <element signature="e#2239#2845#0#HTML" />
+                <element signature="e#2967#2991#0#HTML" />
+                <element signature="e#2931#3257#0#HTML" />
+                <element signature="e#3371#3740#0#HTML" />
+                <element signature="e#4219#4243#0#HTML" />
+                <element signature="e#3855#3879#0#HTML" />
+                <element signature="e#5785#7306#0#HTML" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,12 +202,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/cart/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="105" column="20" selection-start-line="105" selection-start-column="6" selection-end-line="105" selection-end-column="20" />
+            <state relative-caret-position="657">
+              <caret line="144" column="66" selection-start-line="144" selection-start-column="66" selection-end-line="144" selection-end-column="66" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1551969006294" expanded="false" signature="398:403" ph="..." />
-                <marker date="1551969006294" expanded="true" signature="2896:3964" ph="..." />
+                <marker date="1552049045195" expanded="false" signature="398:403" ph="..." />
               </folding>
             </state>
           </provider>
@@ -283,12 +292,12 @@
         <option value="$PROJECT_DIR$/templates/search/indexes/search1.html" />
         <option value="$PROJECT_DIR$/templates/list.html" />
         <option value="$PROJECT_DIR$/templates/search/search.html" />
-        <option value="$PROJECT_DIR$/templates/detail.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/dailyfresh/settings.py" />
-        <option value="$PROJECT_DIR$/templates/cart.html" />
-        <option value="$PROJECT_DIR$/apps/cart/views.py" />
         <option value="$PROJECT_DIR$/apps/cart/urls.py" />
+        <option value="$PROJECT_DIR$/templates/detail.html" />
+        <option value="$PROJECT_DIR$/apps/cart/views.py" />
+        <option value="$PROJECT_DIR$/templates/cart.html" />
       </list>
     </option>
   </component>
@@ -299,7 +308,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="465" />
+    <option name="x" value="310" />
     <option name="y" value="24" />
     <option name="width" value="1432" />
     <option name="height" value="903" />
@@ -457,10 +466,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="465" y="24" width="1432" height="903" extended-state="0" />
+    <frame x="310" y="24" width="1432" height="903" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15512265" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15728715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -729,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1430">
@@ -813,17 +815,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3916">
-          <caret line="178" column="70" selection-start-line="178" selection-start-column="70" selection-end-line="178" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/mixin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dailyfresh/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3256">
+          <caret line="149" column="12" selection-start-line="149" selection-start-column="12" selection-end-line="149" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -851,38 +853,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cart.html">
+    <entry file="file://$PROJECT_DIR$/apps/cart/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-83">
-          <caret line="54" column="67" selection-start-line="54" selection-start-column="67" selection-end-line="54" selection-end-column="67" />
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#1#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-899">
+          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="165" column="63" lean-forward="true" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/cart/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="105" column="20" selection-start-line="105" selection-start-column="6" selection-end-line="105" selection-end-column="20" />
+        <state relative-caret-position="657">
+          <caret line="144" column="66" selection-start-line="144" selection-start-column="66" selection-end-line="144" selection-end-column="66" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1551969006294" expanded="false" signature="398:403" ph="..." />
-            <marker date="1551969006294" expanded="true" signature="2896:3964" ph="..." />
+            <marker date="1552049045195" expanded="false" signature="398:403" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dailyfresh/settings.py">
+    <entry file="file://$PROJECT_DIR$/templates/cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="149" column="12" selection-start-line="149" selection-start-column="12" selection-end-line="149" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cart/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="445">
+          <caret line="245" column="22" selection-start-line="245" selection-start-column="22" selection-end-line="245" selection-end-column="22" />
           <folding>
-            <element signature="e#1#42#0" expanded="true" />
+            <element signature="n#ul#0;n#!!top" />
+            <element signature="n#ul#2;n#!!top" />
+            <element signature="n#ul#3;n#!!top" />
+            <element signature="e#2239#2845#0#HTML" />
+            <element signature="e#2967#2991#0#HTML" />
+            <element signature="e#2931#3257#0#HTML" />
+            <element signature="e#3371#3740#0#HTML" />
+            <element signature="e#4219#4243#0#HTML" />
+            <element signature="e#3855#3879#0#HTML" />
+            <element signature="e#5785#7306#0#HTML" />
           </folding>
         </state>
       </provider>

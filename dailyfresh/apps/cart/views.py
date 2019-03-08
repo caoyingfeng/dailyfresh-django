@@ -135,7 +135,14 @@ class CartUpdateView(View):
         # 更新
         conn.hset(cart_key, sku_id, count)
         # 返回应答
-        return JsonResponse({'res': 5, 'message': '更新成功'})
+
+        # 计算用户购物车中上皮总件数
+        total_count = 0
+        vals = conn.hvals(cart_key)
+        for val in vals:
+            total_count += int(val)
+
+        return JsonResponse({'res': 5, 'total_count': total_count, 'message': '更新成功'})
 
 
 
