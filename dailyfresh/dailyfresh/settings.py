@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'dailyfresh',
         'USER': 'root',
         'PASSWORD': '199232cyl',
-        'HOST': 'localhost',#'192.168.1.3',
+        'HOST': '192.168.1.4',#'localhost',#'192.168.1.3',
         'PORT': 3306,
     }
 }
@@ -140,7 +140,7 @@ EMAIL_FROM = '天天生鲜<164972038@qq.com>'
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://192.168.1.139:6379/9",
+        "LOCATION": "redis://192.168.1.4:6379/9",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -161,7 +161,7 @@ DEFAULT_FILE_STORAGE='utils.fdfs.storage.FDFSStorage'
 FDFS_CLIENT_CONF = './utils/fdfs/client.conf'
 
 # 设置fdfs存储服务器上nginx的服务器ip和端口
-FDFS_URL = "http://192.168.1.139:8888/"
+FDFS_URL = "http://192.168.1.4:8888/"
 
 # 全文检索框架的配置
 HAYSTACK_CONNECTIONS = {
