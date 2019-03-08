@@ -32,7 +32,9 @@
 			</div>
 		</li>
 		<li class="col07">{{ sku.amount }}元</li>
+
 		<li class="col08"><a href="javascript:;">删除</a></li>
+
 	</ul>
     {% endfor %}
 	<ul class="cart_list_td clearfix">
@@ -247,6 +249,33 @@
             }
         })
 
+        // 删除商品
+        $('.cart_list_td').children('.col08').children('a').click(function () {
+            // 获取sku_id
+            sku_id = $(this).parents('ul').find('.num_show').attr('sku_id')
+            csrf = $('input[name="csrfmiddlewaretoken"]').val()
+            // 组织参数
+            params = {'sku_id':sku_id, 'csrfmiddlewaretoken':csrf}
 
+            // 获取商品所在的ul元素
+            sku_ul = $('this').parents('ul')
+            $.post('/cart/delete', params, function (data) {
+                if(data.res==3){
+                    // 删除成功, 移除页面上ul元素
+                    sku_ul.remove()
+                    // 获取sku_ul中商品选中状态
+                    is_checked = sku_ul.find(':checkbox').prop('checked')
+                    if (is_checked){
+                        update_page_info()
+                    }
+                    //更新总件数
+                    $('.total_count').children('.em').text(data.total_count)
+                }
+                else{
+                    alert(data.errmsg)
+                }
+
+            })
+        })
     </script>
 {% endblock bottomfiles %}
