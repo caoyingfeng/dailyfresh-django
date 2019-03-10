@@ -15,10 +15,11 @@
 		<li class="col05">小计</li>
 		<li class="col06">操作</li>
 	</ul>
+    <form method="post" action="/order/place">
     {% for sku in skus %}
 	<ul class="cart_list_td clearfix">
-
-		<li class="col01"><input type="checkbox" name="" checked></li>
+        {#  表单中，只有checkbox选中之后直才会提交 #}
+		<li class="col01"><input type="checkbox" name="sku_ids" value="{{ sku.id }}" checked></li>
 		<li class="col02"><img src="{{ sku.image.url }}"></li>
 		<li class="col03">{{ sku.name }}<br><em>{{ sku.price }}元/{{ sku.unit }}g</em></li>
 		<li class="col04">{{ sku.unit }}g</li>
@@ -37,31 +38,16 @@
 
 	</ul>
     {% endfor %}
-	<ul class="cart_list_td clearfix">
 
-		<li class="col01"><input type="checkbox" name="" checked></li>
-		<li class="col02"><img src="images/goods/goods003.jpg"></li>
-		<li class="col03">大兴大棚草莓<br><em>16.80元/500g</em></li>
-		<li class="col04">500g</li>
-		<li class="col05">16.80元</li>
-		<li class="col06">
-			<div class="num_add">
-				<a href="javascript:;" class="add fl">+</a>
-				<input type="text" class="num_show fl" value="1">	
-				<a href="javascript:;" class="minus fl">-</a>	
-			</div>
-		</li>
-		<li class="col07">16.80元</li>
-		<li class="col08"><a href="javascript:;">删除</a></li>
-	</ul>
 
 	<ul class="settlements">
         {% csrf_token %}
 		<li class="col01"><input type="checkbox" name="" checked=""></li>
 		<li class="col02">全选</li>
 		<li class="col03">合计(不含运费)：<span>¥</span><em>{{ total_price }}</em><br>共计<b>{{ total_count }}</b>件商品</li>
-		<li class="col04"><a href="place_order.html">去结算</a></li>
+		<li class="col04"><input type="submit" value="去结算"></a></li>
 	</ul>
+    </form>
 {% endblock body %}
 
 {% block bottomfiles %}
@@ -279,3 +265,22 @@
         })
     </script>
 {% endblock bottomfiles %}
+
+
+{#	<ul class="cart_list_td clearfix">#}
+{##}
+{#		<li class="col01"><input type="checkbox" name="" checked></li>#}
+{#		<li class="col02"><img src="images/goods/goods003.jpg"></li>#}
+{#		<li class="col03">大兴大棚草莓<br><em>16.80元/500g</em></li>#}
+{#		<li class="col04">500g</li>#}
+{#		<li class="col05">16.80元</li>#}
+{#		<li class="col06">#}
+{#			<div class="num_add">#}
+{#				<a href="javascript:;" class="add fl">+</a>#}
+{#				<input type="text" class="num_show fl" value="1">	#}
+{#				<a href="javascript:;" class="minus fl">-</a>	#}
+{#			</div>#}
+{#		</li>#}
+{#		<li class="col07">16.80元</li>#}
+{#		<li class="col08"><a href="javascript:;">删除</a></li>#}
+{#	</ul>#}
