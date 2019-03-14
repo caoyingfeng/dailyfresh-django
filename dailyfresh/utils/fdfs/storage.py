@@ -1,7 +1,7 @@
 from django.core.files.storage import Storage
 from fdfs_client.client import Fdfs_client
 
-from django.core import settings
+from django.conf import settings
 
 class FDFSStorage(Storage):
     '''自定义fastdfs文件存储类'''
@@ -12,7 +12,7 @@ class FDFSStorage(Storage):
         self.client_conf = client_conf
 
         if base_url is None:
-            base_url = "http://192.168.1.139:8888/"
+            base_url = "http://192.168.1.4:8888/"
         self.base_url = settings.FDFS_URL
 
     def _open(self, name, mode ='rb'):

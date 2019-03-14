@@ -91,7 +91,7 @@ DATABASES = {
     }
 }
 
-#django 认证系统使用的模型类
+# django 认证系统使用的模型类
 AUTH_USER_MODEL='user.User'
 
 # Internationalization
@@ -111,32 +111,32 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-#STATIC_URL = '/static/'
-#STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')] 错误原因少个S
+# STATIC_URL = '/static/'
+# STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')] 错误原因少个S
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-#富文本编辑器配置
+# 富文本编辑器配置
 TINYMCE_DEFAULT_CONFIG = {
     'theme': 'advanced',
     'width': 600,
     'height': 400,
 }
 
-#发送邮件配置
+# 发送邮件配置
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-#发邮件的SMTP服务器地址
+# 发邮件的SMTP服务器地址
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 25
-#发送邮件的邮箱
+# 发送邮件的邮箱
 EMAIL_HOST_USER = '164972038@qq.com'
-#在邮箱中设置的客户端授权密码
+# 在邮箱中设置的客户端授权密码
 EMAIL_HOST_PASSWORD = 'mcgnwaksobtxbicd'
-#收件人看到的发件人
+# 收件人看到的发件人
 EMAIL_FROM = '天天生鲜<164972038@qq.com>'
 
 
-#django的缓存配置
+# django的缓存配置
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -147,17 +147,17 @@ CACHES = {
     }
 }
 
-#配置session存储
+# 配置session存储
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
 
-#配置登录url地址
+# 配置登录url地址
 LOGIN_URL='/user/login'
 
 # 设置Django文件存储类
 DEFAULT_FILE_STORAGE='utils.fdfs.storage.FDFSStorage'
 
-#  设置fdfs使用的client_conf文件路径
+# 设置fdfs使用的client_conf文件路径
 FDFS_CLIENT_CONF = './utils/fdfs/client.conf'
 
 # 设置fdfs存储服务器上nginx的服务器ip和端口
