@@ -121,7 +121,7 @@
         <counts>
           <entry key="conf" value="1" />
           <entry key="html" value="5369" />
-          <entry key="py" value="6695" />
+          <entry key="py" value="7106" />
           <entry key="txt" value="143" />
         </counts>
       </usages-collector>
@@ -129,7 +129,7 @@
         <counts>
           <entry key="HTML" value="5369" />
           <entry key="PLAIN_TEXT" value="144" />
-          <entry key="Python" value="6695" />
+          <entry key="Python" value="7106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -193,11 +193,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/order/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="136" column="78" selection-start-line="136" selection-start-column="78" selection-end-line="136" selection-end-column="78" />
+            <state relative-caret-position="464">
+              <caret line="273" column="67" selection-start-line="273" selection-start-column="67" selection-end-line="273" selection-end-column="67" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
                 <element signature="e#497#1988#0" />
+                <element signature="e#2089#4828#0" />
               </folding>
             </state>
           </provider>
@@ -331,7 +332,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="558" />
+    <option name="x" value="474" />
     <option name="y" value="24" />
     <option name="width" value="1432" />
     <option name="height" value="903" />
@@ -501,7 +502,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="558" y="24" width="1432" height="903" extended-state="0" />
+    <frame x="223" y="24" width="1432" height="903" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17748918" />
@@ -918,11 +919,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/order/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="136" column="78" selection-start-line="136" selection-start-column="78" selection-end-line="136" selection-end-column="78" />
+        <state relative-caret-position="464">
+          <caret line="273" column="67" selection-start-line="273" selection-start-column="67" selection-end-line="273" selection-end-column="67" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
             <element signature="e#497#1988#0" />
+            <element signature="e#2089#4828#0" />
           </folding>
         </state>
       </provider>
