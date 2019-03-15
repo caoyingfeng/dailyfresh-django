@@ -134,7 +134,8 @@ class OrderCommitView(View):
             sku_ids = sku_ids.split(',')
             for sku_id in sku_ids:
                 try:
-                    sku = GoodsSKU.objects.get(id=sku_id)
+                    # select * from df_goods_sku_where id = sku_id for update;
+                    sku = GoodsSKU.objects.select_for_update().get(id=sku_id)
                 except GoodsSKU.DoesNotExist:
                     # 商品不存在
                     transaction.savepoint_rollback(save_id)
