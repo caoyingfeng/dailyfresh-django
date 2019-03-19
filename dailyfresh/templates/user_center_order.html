@@ -68,6 +68,18 @@
                 if(data.res==3){
                     // 引导用户到支付页面
                     window.open(data.pay_url)
+                    // 浏览器访问/order/check，查询支付结果
+                    // ajax post 传递参数order_id
+                    $.post('/order/check', params, function (data) {
+                        if(data.res==3){
+                            alert('支付成功')
+                            // 刷新页面
+                            location.reload()
+                        }
+                        else{
+                            alert(data.errmsg)
+                        }
+                    })
                 }
                 else{
                     alert(data.errmsg)
