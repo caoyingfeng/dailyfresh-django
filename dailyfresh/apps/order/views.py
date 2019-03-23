@@ -369,10 +369,11 @@ class OrderPayView(View):
 # ajax post
 # 前端传递的参数： 订单id(order_id)
 class CheckPayView(View):
+
     '''查询订单支付结果'''
     def post(self,request):
         '''查询支付结果'''
-        '''订单支付'''
+
         # 用户登录校验
         user = request.user
         if not user.is_authenticated():
@@ -451,3 +452,66 @@ class CheckPayView(View):
             else:
                 # 支付出错
                 return JsonResponse({'res':4, 'errmsg': '支付失败'})
+
+
+
+class CommentView(LoginRequiredMixin, View):
+    '''订单评论'''
+    def get(self, request, order_id):
+        '''提供评论页面'''
+        user = request.user
+
+        # 校验数据
+        if not order_id:
+            return redirect(reverse('user:order'))
+        try:
+            order = OrderInfo.objects.get(id=order_id, user=user)
+        except OrderGoods.DoesNotExist:
+            return redirect(reverse('user:order'))
+
+        # 根据订单状态获取状态标题
+        order.status_name = OrderInfo.ORDER_STATUS[order.order_status]
+        # 获取订单商品信息
+        order_skus = OrderGoods.objects.filter(order_id=order_id)
+        for order_sku in order_skus:
+            # 计算商品的小计
+            amount = order_sku.count*order_sku.price
+            # 动态给order_sku保存amount属性，保存商品属性
+            order_sku.amount = amount
+        # 动态给order增加属性order_skus,保存订单商品信息
+        order.order_skus = order_skus
+        # 使用模板
+        return render(request, 'order_comment.html', {'order':order})
+
+    def post(self, request, order_id):
+        '''处理评论页面'''
+        user= request.user
+        # 校验数据
+        if not order_id:
+            return redirect(reverse('user:order'))
+        try:
+            order = OrderInfo.objects.get(id=order_id, user=user)
+        except OrderGoods.DoesNotExist:
+            return redirect(reverse('user:order'))
+
+        # 获取评论条数
+        total_count = request.POST.get('total_count')
+        total_count = int(total_count)
+        # 循环获取订单中商品的评论内容
+        for i in range(1, total_count+1):
+            # 获取评论的商品id
+            sku_id = request.POST.get('sku_%d'%i)
+            # 获取评论的商品内容
+            content = request.POST.get('content_%d'%i, '')
+            try:
+                order_goods = OrderGoods.objects.get(order=order, sku_id=sku_id)
+            except OrderGoods.DoesNotExist:
+                continue
+
+            order_goods.comment = content
+            order_goods.save()
+
+        order.order_status = 5 # 已完成
+        order.save()
+
+        return redirect(reverse("user:order", kwargs={"page": 1}))
