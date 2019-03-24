@@ -10,7 +10,11 @@
                 <li class="col02">订单号：{{order.order_id}}</li>
                 <li class="col02 stress">{{order.status_name}}</li>
             </ul>
+<<<<<<< HEAD
         <form action="">
+=======
+        <form method="post">
+>>>>>>> aff6df9d38eb1439ae8d0b2a6fc8ae631c913cd3
             {% csrf_token %}
             <input type="hidden" name="order_id" value="{{order.order_id}}">
             {# 订单中有几个商品 #}
@@ -38,6 +42,10 @@
                     </div>
                 </div>
                 {% endfor %}
+<<<<<<< HEAD
+=======
+                <input type="submit" name="" value="提交" class="info_submit">
+>>>>>>> aff6df9d38eb1439ae8d0b2a6fc8ae631c913cd3
         </form>
     </div>
 {% endblock right_content %}

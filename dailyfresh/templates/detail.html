@@ -39,7 +39,7 @@
                 </ul>
             </div>
 
-			<div class="total">总价：<em>16.80元</em></div>
+			<div class="total">总价：<em>{{ sku.price }}元</em></div>
 			<div class="operate_btn">
                 {% csrf_token  %}
 				<a href="javascript:;" class="buy_btn">立即购买</a>
@@ -66,11 +66,11 @@
 
 		<div class="r_wrap fr clearfix">
 			<ul class="detail_tab clearfix">
-				<li class="active">商品介绍</li>
-				<li>评论</li>
+				<li id="tag_detail" class="active">商品介绍</li>
+				<li id="tag_comment">评论</li>
 			</ul>
 
-			<div class="tab_content">
+			<div class="tab_content" id="tag_detail">
 				<dl>
 					<dt>商品详情：</dt>
                     {# 关闭转义，富文本编辑 #}
@@ -78,7 +78,7 @@
 				</dl>
 			</div>
 
-            <div class="tab_content">
+            <div class="tab_content" id="tag_comment" style="display: none">
 				<dl>
                     {% for sku_order in sku_orders %}
 					<dt>评论时间：{{ sku_order.update_time }}&nbsp;&nbsp;用户名：{{ sku_order.order.user.username }}</dt>
@@ -97,6 +97,18 @@
 {% block bottomfiles %}
 	<script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
 	<script type="text/javascript">
+        $('#tag_detail').click(function () {
+            $('#tag_comment').removeClass('active')
+            $(this).addClass('active')
+            $('tab_detail').show()
+            $('tab_comment').hide()
+        })
+        $('#tag_comment').click(function () {
+            $('#tag_detail').removeClass('active')
+            $(this).addClass('active')
+            $('tab_comment').show()
+            $('tab_detail').hide()
+        })
         update_goods_amount()
         // 计算商品的总价格
         function update_goods_amount(){
